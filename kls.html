@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>CryptoYeti - KLS Karlsen</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Helpful tips for those trying to get KLS Karlsen coin going.</h1>
+    </header>
+
+    <main>
+        <h2>Setting up wallet and obtaing a KLS address</h2>
+      <p>
+        <ol>
+        <li>
+            Download the client: <a href="https://github.com/karlsen-network/karlsend/releases">
+            https://github.com/karlsen-network/karlsend/releases</a></li>
+        <li>
+            Unzip files and put somewhere you can easily find them. I just create a dedicated directory like 
+            C:\Karlsen and place them all in there.</li>
+        <li>
+            Open up a command prompt or powershell and change to the Karlsen directory (i.e. cd C:\Karlsen). <br>
+            Type in the command:  karlsend.exe --utxoindex <br>
+            This will start the node and sync it to the blockchain. Note that it may take some time to fully sync up with the network.
+        </li>
+        <li>Open up a new command prompt or powershell (leave previous window open) and change to the Karlsen directory (i.e. cd C:\Karlsen). <br>
+            Type in the command:  karlsenwallet.exe start-daemon <br>
+            This will start the wallet daemon in order for you to execute the next steps.
+        </li>
+        <li>
+            <h4>Create a new wallet</h4><br>
+            Type in the command:  karlsenwallet.exe create <br>
+            This will create a new wallet keyfile.
+        </li>
+        <li>
+            <h4>Reveal and save your seed words</h4><br>
+            Type in the command:  karlsenwallet.exe dump-unencrypted-data <br>
+            This will display your newly created wallets seed words. Write these down and keep them safe. <br>
+            These words can be used to recreate your wallet if it becomes corrupted. Be careful as anyone who has these words can also gain access to your coins.
+        </li>
+        <li>
+            <h4>Create a new receiving address</h4><br>
+            Type in the command:  karlsenwallet.exe new-address <br>
+            This will create a new wallet receiving address you can send KLS coins to.
+        </li>
+        <li>
+            <h4>Check balance</h4><br>
+            Type in the command:  karlsenwallet.exe balance <br>
+            This will display the balance of the address you created above. <br>
+            Alternatively, type in the command:  karlsenwallet.exe balance -v<br>
+            The addition of the -v flag will display all addresses with a balance. 
+            This is useful to also display change balances once you made a few transactions. <br>
+        </li>
+
+        </ol>>
+    </p>
+      <img src="img/under_construction.png"
+      alt="Under construction image"
+      height="200">
+  </main>
+
+  <footer>
+    <hr>
+    <br>
+    <a href="/">Copyright &copy; 2016-2023 CryptoYeti.com</a>&nbsp;-&nbsp;
+    <a href="/privacy">Privacy Policy</a>&nbsp;-&nbsp;
+    <a href="/tos">Terms of Service</a>
+    <br>
+  </footer>
+
+  </body>
+
+</html>
