@@ -7,5 +7,10 @@ body {
     background: -o-linear-gradient(right, #8dcff7, #1c87c9);
     background: -moz-linear-gradient(right, #8dcff7, #1c87c9); 
     background: linear-gradient(to right, #8dcff7, #1c87c9); 
-    background-color: #8dcff7; 
+    background-color: #8dcff7;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
