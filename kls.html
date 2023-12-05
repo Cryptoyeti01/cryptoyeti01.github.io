@@ -21,16 +21,16 @@
             Download the client: <a href="https://github.com/karlsen-network/karlsend/releases">
             https://github.com/karlsen-network/karlsend/releases</a></li>
         <li>
-            Unzip the files and put somewhere you can easily find them. I just created a dedicated directory like 
+            Unzip the files and put them somewhere you can easily find them. I just created a dedicated directory like 
             C:\Karlsen and placed them all in there. <br><br>
             <img src="img/karlsen_directory.jpg"
             alt="Karlsen File Directory"
-            height="200">
+            height="200"><br><br>
         </li>
         <li>
             Open up a command prompt or powershell and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br>
-            Type in the command:  <code>karlsend.exe --utxoindex</code> <br>
-            This will start the node and sync it to the blockchain. Note that it may take some time to fully sync up with the network.
+            Type in the command:  <code>karlsend.exe --utxoindex</code> <br><br>
+            This will start the node and sync it to the blockchain. Note that it may take some time to fully sync up with the network.<br><br>
         </li>
         <li>Open up a new command prompt or powershell (leave previous window open) and change to the Karlsen directory (i.e. cd C:\Karlsen). <br><br>
             Type in the command:  <code>karlsenwallet.exe start-daemon</code> <br>
@@ -40,23 +40,23 @@
             height="200">
         </li>
         <li>
-            <h4>Create a new wallet</h4><br>
+            <h4>Create a new wallet</h4>
             Type in the command:  <code>karlsenwallet.exe create</code> <br><br>
-            This will create a new wallet keyfile.
+            This will create a new wallet keyfile. It will ask you to create a new password to secure the keyfile (wallet). Write the password down and keep it somewhere safe.
         </li>
         <li>
-            <h4>Reveal and save your seed words</h4><br>
+            <h4>Reveal and save your seed words</h4>
             Type in the command:  <code>karlsenwallet.exe dump-unencrypted-data</code> <br>
             This will display your newly created wallets seed words. Write these down and keep them safe. <br>
             These words can be used to recreate your wallet if it becomes corrupted. Be careful as anyone who has these words can also gain access to your coins.
         </li>
         <li>
-            <h4>Create a new receiving address</h4><br>
+            <h4>Create a new receiving address</h4>
             Type in the command:  <code>karlsenwallet.exe new-address</code> <br>
             This will create a new wallet receiving address you can send KLS coins to.
         </li>
         <li>
-            <h4>Check balance</h4><br>
+            <h4>Check balance</h4>
             Type in the command:  <code></code>karlsenwallet.exe balance</code> <br>
             This will display the balance of the address you created above. <br>
             Alternatively, type in the command:  <code>karlsenwallet.exe balance -v</code><br>
@@ -69,7 +69,7 @@
 
         </ol>
 
-        Troubleshooting
+        <H3>Troubleshooting</H3>
 
         The main issue people expeience is first syncing up the Karlsen node with the network.
         There are two solutions, the first is downloading a copy of the blockchain. While this option was useful at first 
@@ -78,6 +78,20 @@
         The second solution is to add a known good peer to your node startup command.
         <code>karlsend.exe --utxoindex --addpeer x.x.x.x</code> where x.x.x.x is the IP of a known good peer.<br><br>
         You can check discord for any peer listings, as right now an offical list in non-existent.
+    </p>
+
+    <h3>Setting up wallet and obtaing a KLS address</h3>
+
+    <h4>Mining Software</h4>
+    <p>The currently available GPU mining software include the following:
+        <ul>
+            <li>
+                <bold>lolMiner 1.78 -</bold> <a href="https://github.com/Lolliedieb/lolMiner-releases/releases/tag/1.78">https://github.com/Lolliedieb/lolMiner-releases/releases/tag/1.78</a>
+            </li>
+            <li>
+                <bold>SRBMiner-MULTI 2.4.2 -</bold> <a href="https://github.com/doktor83/SRBMiner-Multi/releases/tag/2.4.2">https://github.com/doktor83/SRBMiner-Multi/releases/tag/2.4.2</a>
+            </li>
+        </ul>
     </p>
       <img src="img/under_construction.png"
       alt="Under construction image"
