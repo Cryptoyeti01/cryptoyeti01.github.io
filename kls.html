@@ -28,12 +28,12 @@
             height="200">
         </li>
         <li>
-            Open up a command prompt or powershell and change to the Karlsen directory (i.e. cd C:\Karlsen). <br>
-            Type in the command:  karlsend.exe --utxoindex <br>
+            Open up a command prompt or powershell and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br>
+            Type in the command:  <code></code>karlsend.exe --utxoindex</code> <br>
             This will start the node and sync it to the blockchain. Note that it may take some time to fully sync up with the network.
         </li>
         <li>Open up a new command prompt or powershell (leave previous window open) and change to the Karlsen directory (i.e. cd C:\Karlsen). <br>
-            Type in the command:  karlsenwallet.exe start-daemon <br>
+            Type in the command:  <code></code>karlsenwallet.exe start-daemon</code> <br>
             This will start the wallet daemon in order for you to execute the next steps. <br><br>
             <img src="img/karlsen_start_daemon.jpg"
             alt="Karlsen File Directory"
@@ -41,27 +41,30 @@
         </li>
         <li>
             <h4>Create a new wallet</h4><br>
-            Type in the command:  karlsenwallet.exe create <br>
+            Type in the command:  <code>karlsenwallet.exe create</code> <br>
             This will create a new wallet keyfile.
         </li>
         <li>
             <h4>Reveal and save your seed words</h4><br>
-            Type in the command:  karlsenwallet.exe dump-unencrypted-data <br>
+            Type in the command:  <code>karlsenwallet.exe dump-unencrypted-data</code> <br>
             This will display your newly created wallets seed words. Write these down and keep them safe. <br>
             These words can be used to recreate your wallet if it becomes corrupted. Be careful as anyone who has these words can also gain access to your coins.
         </li>
         <li>
             <h4>Create a new receiving address</h4><br>
-            Type in the command:  karlsenwallet.exe new-address <br>
+            Type in the command:  <code>karlsenwallet.exe new-address</code> <br>
             This will create a new wallet receiving address you can send KLS coins to.
         </li>
         <li>
             <h4>Check balance</h4><br>
-            Type in the command:  karlsenwallet.exe balance <br>
+            Type in the command:  <code></code>karlsenwallet.exe balance</code> <br>
             This will display the balance of the address you created above. <br>
-            Alternatively, type in the command:  karlsenwallet.exe balance -v<br>
+            Alternatively, type in the command:  <code>karlsenwallet.exe balance -v</code><br>
             The addition of the -v flag will display all addresses with a balance. 
-            This is useful to also display change balances once you made a few transactions. <br>
+            This is useful to also display change balances once you made a few transactions. <br><br>
+            <img src="img/karlsen_wallet_show_balance.jpg"
+            alt="Karlsen Wallet Show Balance Commands"
+            height="200">
         </li>
 
         </ol>>
