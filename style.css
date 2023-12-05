@@ -3,9 +3,9 @@
 }
  
 body {
-    background: -webkit-linear-gradient(left, #1c87c9, #222222); 
-    background: -o-linear-gradient(right, #1c87c9, #222222);
-    background: -moz-linear-gradient(right, #1c87c9, #222222); 
-    background: linear-gradient(to right, #1c87c9, #222222); 
-    background-color: #222222; 
+    background: -webkit-linear-gradient(left, #8dcff7, #1c87c9); 
+    background: -o-linear-gradient(right, #8dcff7, #1c87c9);
+    background: -moz-linear-gradient(right, #8dcff7, #1c87c9); 
+    background: linear-gradient(to right, #8dcff7, #1c87c9); 
+    background-color: #8dcff7; 
 }
