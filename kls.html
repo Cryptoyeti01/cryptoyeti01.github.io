@@ -29,26 +29,35 @@
       <p>
         <ol>
         <li>
-            Download the client: <a href="https://github.com/karlsen-network/karlsend/releases">
+            <h4>Download the client</h4>
+            Download the client from the project's Github page: <a href="https://github.com/karlsen-network/karlsend/releases">
             https://github.com/karlsen-network/karlsend/releases</a></li>
         <li>
-            Unzip the files and put them somewhere you can easily find them. I just created a dedicated directory like 
-            C:\Karlsen and placed them all in there. <br><br>
+            <h4>Extract the downloaded files</h4>
+            Unzip the files and put them somewhere that you can easily find them. I just created a new dedicated directory, like 
+            <code>C:\Karlsen</code>, and placed them all in there. <br><br>
             <img src="img/karlsen_directory.jpg"
             alt="Karlsen File Directory"
             height="200"><br><br>
         </li>
         <li>
-            Open up a command prompt or powershell and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br>
+            <h4>Run the node</h4>
+            In order to sync up to the blockchain to be able to see your balance and send coins, 
+            you will need to syncronize your node with the network.<br><br>
+            Open up a command prompt (or powershell window) and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br>
             Type in the command:  <code>karlsend.exe --utxoindex</code> <br><br>
             This will start the node and sync it to the blockchain. Note that it may take some time to fully sync up with the network.<br><br>
         </li>
-        <li>Open up a new command prompt or powershell (leave previous window open) and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br><br>
-            Type in the command:  <code>karlsenwallet.exe start-daemon</code> <br>
+        <li>
+            <h4>Start the wallet daemon</h4>
+            Open up a new command prompt, or powershell window (<b>leave the previous window open</b>), and change to the Karlsen directory (i.e. <code>cd C:\Karlsen</code>). <br><br>
+            Type in the command:  <code>karlsenwallet.exe start-daemon</code> <br><br>
             This will start the wallet daemon in order for you to execute the next steps. <br><br>
             <img src="img/karlsen_start_daemon.jpg"
             alt="Karlsen Start Daemon"
             height="200">
+            <br><br>
+            <b>Note:</b> Leave this window open and leave running in the background as well.
         </li>
         <li>
             <h4>Create a new wallet</h4>
@@ -57,28 +66,40 @@
         </li>
         <li>
             <h4>Reveal and save your seed words</h4>
-            Type in the command:  <code>karlsenwallet.exe dump-unencrypted-data</code> <br>
-            This will display your newly created wallets seed words. Write these down and keep them safe. <br>
-            These words can be used to recreate your wallet if it becomes corrupted. Be careful as anyone who has these words can also gain access to your coins.
+            Type in the command:  <code>karlsenwallet.exe dump-unencrypted-data</code> <br><br>
+            This will display your newly created wallet's seed words. Write these down and keep them somewhere safe.<br><br>
+            These words can be used to recreate your wallet in the event it becomes corrupted or inaccessible. 
+            Be careful as anyone who has these words can also recreate your wallet and gain access to your coins.
         </li>
         <li>
             <h4>Create a new receiving address</h4>
-            Type in the command:  <code>karlsenwallet.exe new-address</code> <br>
-            This will create a new wallet receiving address you can send KLS coins to.
+            Type in the command:  <code>karlsenwallet.exe new-address</code> <br><br>
+            This will create a new wallet receiving address that you can send KLS coins to.
         </li>
         <li>
             <h4>Check balance</h4>
-            Type in the command:  <code></code>karlsenwallet.exe balance</code> <br>
-            This will display the balance of the address you created above. <br>
-            Alternatively, type in the command:  <code>karlsenwallet.exe balance -v</code><br>
+            Type in the command:  <code>karlsenwallet.exe balance</code> <br><br>
+            This will display the balance of the address you created above. <br><br>
+            Alternatively, type in the command:  <code>karlsenwallet.exe balance -v</code><br><br>
             The addition of the -v flag will display all addresses with a balance. 
-            This is useful to also display change balances once you made a few transactions. <br><br>
+            This is useful to also display your wallet's change balances once you have made a few transactions. <br><br>
             <img src="img/karlsen_wallet_show_balance.jpg"
             alt="Karlsen Wallet Show Balance Commands"
             height="200">
         </li>
+        <li>
+            <h4>Send Coins</h4>
+            To send your coins to a different address (i.e an exchange or other wallet) be sure to have the correct address of the receipent.<br><br>
+            Type in a command in the following format: <code> karlsenwallet.exe send --send-amount xxx /t karlsen-address-you-are-sending-to </code> <br><br>
+            <b>xxx</b> is the amount of coins you wish to send, i.e. 200 and after the <b>/t</b> is the karlsen address you are sending to in the format of 
+            karlsen:qqrestofkarlsenaddress<br><br>
+        </li>
 
         </ol>
+        
+        <h3>Web wallet</h3>
+        The Karlsen team has now released a web wallet since the above instructions were first written to make it a bit easier on newcomers or people not comfortable using the cli wallet.<br><br>
+        The new web wallet can be found on the offical karlsen sebsite. <a href="https://wallet.karlsencoin.com">Karlsen Web Wallet</a>
 
         <H3>Troubleshooting</H3>
 
@@ -91,7 +112,7 @@
         You can check discord for any peer listings, as right now an offical list in non-existent.
     </p>
 
-    <h3>Setting up wallet and obtaing a KLS address</h3>
+    
 
     <h4>Mining Software</h4>
     <p>The currently available GPU mining software include the following:

@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>CryptoYeti - Reviews, News, and Information</title>
   </head>
 
   <body>
+    <content>
     <header>
       <h1>Welcome</h1>
+
     </header>
+
+    <div>
+      <script>
+        const api_url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&precision=4';
+        fetch(api_url)
+          .then(res => {
+            return res.json();
+          })
+          .then(data => {
+            const {usd} = data.bitcoin;
+
+            document.getElementById('btcusd').textContent=usd;
+            console.log(usd);
+          })
+          .catch(error => console.log(error));
+      </script>
+    </div>
 
     <main>
       <p>Website is under construction. Check back soon.</p>
       <img src="img/under_construction.png"
       alt="Under construction image"
-      height="200">
+      height="200"><br><br>
+
+      <p><span id="btc_price">Current Bitcoin Price: </span><span id="btcusd"></span><br>
+        <span id="btcusd_source">(Source <a href="https://www.coingecko.com/">CoinGecko</a>)</span></p>
   </main>
 
   <footer>
@@ -28,7 +51,8 @@
     <a href="/tos">Terms of Service</a>
     <br>
   </footer>
-
+  
+  </content>
   </body>
 
 </html>
