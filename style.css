@@ -18,6 +18,12 @@ body {
 content {
   width: 80vw;
 }
+
+
+#div_bitcoin_price {
+  text-align: right;
+  margin-right: 2vw;
+}
 #btc_price {
   font-size: large;
 }

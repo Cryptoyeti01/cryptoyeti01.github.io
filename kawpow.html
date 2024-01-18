@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CryptoYeti - KAWPOW</title>
+  </head>
+
+  <body>
+    <header>
+        <img src="img/karlsen_logo.png"
+        alt="Karlsen Logo"
+        height="100">
+        <h1>Helpful tips for those mining KAWPOW based coins.</h1>
+    </header>
+
+
+
+    <main>
+        <p>
+            <ul>            
+                <li>You can calculate your max "prog_config" value by multiplying your cards "Single Instruction, Multiple Data" value 
+                with its number of "Texture Mapping Units" per SIMD. The equation is simply "SIMD x TMU = Maximum prog_config value.</li>
+                <li>The RX570 has 128 TMU's and 4 SIMD's per TMU which gives a max prog_config of 512.</li>
+                <li>The RX580 has 144 TMU's with 4 SIMD's per TMU for a maximum prog_config value of 576.</li>
+                <li>For find the optimal value to for maximum hashrate use the calculated maximum value for your card and multiply that value by 0.75 to 0.80. Make sure the resulting number is 
+                a even multiple of 8, round up or down to nearest whole value that is divisible by 8 and use that numbe ris your configuration.<br><br>
+                Using an RX570 for an example the formula would be 128 x 4 x 0.75 = 384.<br><br>
+                With a RX580, the formula would be 144 x 4 x 0.75 = 432.
+                </li>
+                <li>You can calculate the optimum value for virtually any AMD card using this formula. As for your voltage, it varies from card to card. 
+                Just run it as low as you can to maintain stability.</li>
+                <li>It is also worthy to note that your CORE voltage can not be set to lower than the voltage you have set for the VRAM due to the way the hardware supplies voltage to the CORE and VRAM. 
+                    So if VRAM is set at 950mv than the CORE will not run any lower regardless of it's setting.</li>
+             
+             
+             
+            </ul>
+
+        
+    </p>
+      <img src="img/under_construction.png"
+      alt="Under construction image"
+      height="200">
+  </main>
+
+  <footer>
+    <hr>
+    <br>
+    <a href="/">Copyright &copy; 2016-2023 CryptoYeti.com</a>&nbsp;-&nbsp;
+    <a href="/privacy">Privacy Policy</a>&nbsp;-&nbsp;
+    <a href="/tos">Terms of Service</a>
+    <br>
+  </footer>
+
+  </body>
+
+</html>
